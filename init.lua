@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "moonfly",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -69,6 +69,10 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    -- No background
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {

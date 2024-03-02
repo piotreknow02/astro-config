@@ -18,6 +18,18 @@ return {
     --   desc = "Previous buffer",
     -- },
 
+    -- splitting
+    ["<leader>vs"] = {
+      function ()
+        vim.cmd.vsplit()
+      end
+    },
+    ["<leader>hs"] = {
+      function ()
+        vim.cmd.split()
+      end
+    },
+
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -32,6 +44,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+  },
+  v = {
+    ["K"] = ":m '<-2<CR>gv=gv",
+    ["J"] = ":m '>+1<CR>gv=gv",
   },
   t = {
     -- setting a mapping to false will disable it
