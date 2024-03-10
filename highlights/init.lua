@@ -1,3 +1,3 @@
 return { -- this table overrides highlights in all themes
-  Normal = { bg = "none" },
+  -- Normal = { bg = "#000" },
 }
