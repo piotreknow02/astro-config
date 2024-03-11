@@ -29,7 +29,7 @@ return {
     cmd = { "Ollama", "OllamaModel", "OllamaServe", "OllamaServeStop" },
 
     keys = {
-      -- Sample keybind for prompt menu. Note that the <c-u> is important for selections to work properly.
+      -- Note that the <c-u> is important for selections to work properly.
       {
         "<leader>oo",
         ":<c-u>lua require('ollama').prompt()<cr>",
@@ -37,7 +37,7 @@ return {
         mode = { "n", "v" },
       },
 
-      -- Sample keybind for direct prompting. Note that the <c-u> is important for selections to work properly.
+      --  Note that the <c-u> is important for selections to work properly.
       {
         "<leader>oG",
         ":<c-u>lua require('ollama').prompt('Generate_Code')<cr>",
@@ -48,10 +48,10 @@ return {
 
     ---@type Ollama.Config
     opts = {
-      model = "codellama:7b",
+      model = "codellama",
       url = "http://127.0.0.1:11434",
       serve = {
-        on_start = false,
+        on_start = true,
         command = "ollama",
         args = { "serve" },
         stop_command = "pkill",
