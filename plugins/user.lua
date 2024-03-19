@@ -48,7 +48,7 @@ return {
 
     ---@type Ollama.Config
     opts = {
-      model = "stable-code",
+      model = "wizardcoder",
       url = "http://127.0.0.1:11434",
       serve = {
         on_start = true,
