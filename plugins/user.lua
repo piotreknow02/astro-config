@@ -48,7 +48,7 @@ return {
 
     ---@type Ollama.Config
     opts = {
-      model = "deepseek-coder:1.3b",
+      model = "stable-code",
       url = "http://127.0.0.1:11434",
       serve = {
         on_start = true,
