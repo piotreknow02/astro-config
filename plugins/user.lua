@@ -9,7 +9,7 @@ return {
   },
   {
     "eandrju/cellular-automaton.nvim",
-    cmd = "CellularAutomaton"
+    cmd = "CellularAutomaton",
   },
   {
     "kylechui/nvim-surround",
@@ -18,6 +18,16 @@ return {
     config = function()
         require("nvim-surround").setup()
     end
+  },
+  {
+    "sindrets/diffview.nvim",
+    cmd = {
+      "DiffviewOpen",
+      "DiffviewClose",
+      "DiffviewToggleFiles",
+      "DiffviewFocusFiles",
+      "DiffviewRefresh",
+    },
   },
   {
     "nomnivore/ollama.nvim",
