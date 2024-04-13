@@ -6,7 +6,7 @@ return {
 
   -- == Examples of Adding Plugins ==
 
-  "andweeb/presence.nvim",
+  -- "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
@@ -93,9 +93,7 @@ return {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup()
-    end
+    config = function() require("nvim-surround").setup() end,
   },
   {
     "sindrets/diffview.nvim",
@@ -145,6 +143,6 @@ return {
         stop_command = "pkill",
         stop_args = { "-SIGTERM", "ollama" },
       },
-    }
+    },
   },
 }
