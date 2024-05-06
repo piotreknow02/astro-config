@@ -37,9 +37,6 @@ return {
     end,
   },
 
-  -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
-
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
     "L3MON4D3/LuaSnip",
@@ -122,22 +119,14 @@ return {
         desc = "ollama prompt",
         mode = { "n", "v" },
       },
-
-      --  Note that the <c-u> is important for selections to work properly.
-      {
-        "<leader>oG",
-        ":<c-u>lua require('ollama').prompt('Generate_Code')<cr>",
-        desc = "ollama Generate Code",
-        mode = { "n", "v" },
-      },
     },
 
     ---@type Ollama.Config
     opts = {
-      model = "wizardcoder",
+      model = "codeqwen",
       url = "http://127.0.0.1:11434",
       serve = {
-        on_start = true,
+        on_start = false,
         command = "ollama",
         args = { "serve" },
         stop_command = "pkill",
