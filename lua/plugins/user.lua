@@ -103,35 +103,7 @@ return {
     },
   },
   {
-    "nomnivore/ollama.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-
-    -- All the user commands added by the plugin
-    cmd = { "Ollama", "OllamaModel", "OllamaServe", "OllamaServeStop" },
-
-    keys = {
-      -- Note that the <c-u> is important for selections to work properly.
-      {
-        "<leader>oo",
-        ":<c-u>lua require('ollama').prompt()<cr>",
-        desc = "ollama prompt",
-        mode = { "n", "v" },
-      },
-    },
-
-    ---@type Ollama.Config
-    opts = {
-      model = "codeqwen",
-      url = "http://127.0.0.1:11434",
-      serve = {
-        on_start = false,
-        command = "ollama",
-        args = { "serve" },
-        stop_command = "pkill",
-        stop_args = { "-SIGTERM", "ollama" },
-      },
-    },
+    "TabbyML/vim-tabby",
+    -- tabby_keybinding_accept in astrocore.lua
   },
 }
