@@ -104,6 +104,7 @@ return {
   },
   {
     "TabbyML/vim-tabby",
-    -- tabby_keybinding_accept in astrocore.lua
+    event = "BufRead",
+    init = function() vim.g.tabby_inline_completion_keybinding_accept = "<C-y>" end,
   },
 }
