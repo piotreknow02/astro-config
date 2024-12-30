@@ -106,8 +106,8 @@ return {
     "TabbyML/vim-tabby",
     event = "BufRead",
     keys = {
-      { "<C-CR>", mode = { "i", "s" } },
+      { "<C-y>", mode = { "i", "s" } },
     },
-    init = function() vim.g.tabby_inline_completion_keybinding_accept = "<C-CR>" end,
+    init = function() vim.g.tabby_inline_completion_keybinding_accept = "<C-y>" end,
   },
 }
